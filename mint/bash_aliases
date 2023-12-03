@@ -1,0 +1,39 @@
+alias up='uptime'
+
+# install a package
+alias debi='sudo dpkg -i'
+
+# ls -l with dot files
+alias la='ls -lhtrGA'
+alias l='ls -lhtrG'
+
+# grep with color
+alias grep='grep --color=always'
+
+# GIT
+alias st='git status'
+alias co='git checkout'
+alias gpr='git pull --rebase'
+alias branch='git checkout -b'
+alias branches='git branch -rv'
+alias log='git --no-pager log --graph --stat --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset" --abbrev-commit'
+alias giff='git --no-pager diff --color'
+
+# wipe the last Git commit
+function rollback() {
+  git reset --hard HEAD~$@
+}
+
+# free up space hogged by Docker artifacts
+alias docker-clean='docker system prune -f; docker system prune --volumes -f; docker system prune -a -f'
+
+# cd with ls -l every time
+function cd() {
+  builtin cd "$@" && l;
+}
+
+# backup a file
+function bak() {
+  cp "$@" "$@.bak" && ls $@*;
+}
+
