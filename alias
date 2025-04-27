@@ -12,7 +12,6 @@ alias grep='grep --color=always'
 alias st='git status'
 alias co='git checkout'
 alias branch='git checkout -b'
-alias branches='git branch -rv'
 alias log='git --no-pager log --graph --stat --pretty=format:"%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset" --abbrev-commit'
 alias giff='git --no-pager diff --color'
 
