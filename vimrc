@@ -1,4 +1,5 @@
 colorscheme koehler
+syntax on
 set tabstop=4
 set expandtab
 set sw=4
