@@ -9,8 +9,11 @@ git config --global core.editor "vim"
 # slower but better whitespace handling
 git config --global alias.blame "blame -w -C -C -C"
 
+# Reuse Recorded Resolution
 # resolve merge conflicts only once when rebasing
 git config --global rerere.enabled true
+# auto stage recorded fixes for rerere
+git config --global rerere.autoupdate true
 
 git config --global alias.branches "branch -rv"
 git config --global branch.sort -committerdate
