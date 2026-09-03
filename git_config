@@ -1,7 +1,7 @@
 # Commands to run for a new git installation
 # https://www.youtube.com/watch?v=aolI_Rz0ZqY
 
-git config --global push.default current
+git config --global push.default simple
 git config --global user.email "me@me.com"
 git config --global user.name "Ny Name"
 git config --global core.editor "vim"
